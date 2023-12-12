@@ -1,0 +1,6 @@
+/home/ntpshin/Documents/ParallelPrograming/Final/mini-dnn-cpp/build/CMakeFiles/demo_classic.dir
+/home/ntpshin/Documents/ParallelPrograming/Final/mini-dnn-cpp/build/CMakeFiles/edit_cache.dir
+/home/ntpshin/Documents/ParallelPrograming/Final/mini-dnn-cpp/build/CMakeFiles/rebuild_cache.dir
+/home/ntpshin/Documents/ParallelPrograming/Final/mini-dnn-cpp/build/src/CMakeFiles/MiniDNNLib.dir
+/home/ntpshin/Documents/ParallelPrograming/Final/mini-dnn-cpp/build/src/CMakeFiles/edit_cache.dir
+/home/ntpshin/Documents/ParallelPrograming/Final/mini-dnn-cpp/build/src/CMakeFiles/rebuild_cache.dir

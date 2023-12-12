@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/demo_classic.dir/demo_classic.cc.o -o demo_classic  src/libMiniDNNLib.a 
