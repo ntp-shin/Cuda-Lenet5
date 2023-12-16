@@ -2,16 +2,23 @@
 **mini-dnn-cpp** is a C++ demo of deep neural networks. It is implemented purely in C++, whose only dependency, Eigen, is header-only. 
 
 ## Usage
-Download and unzip [MNIST](http://yann.lecun.com/exdb/mnist/) dataset in `mini-dnn-cpp/data/mnist/`.
 
+Linux
 ```shell
-mkdir build
-cd build
-cmake ..
-make
+git clone https://github.com/ntp-shin/Cuda-Lenet5
+cd Cuda-Lenet5
+make setup
+make run
 ```
 
-Run `./demo`.
+Google Colab:
+```shell
+!git clone https://github.com/ntp-shin/Cuda-Lenet5
+!cd Cuda-Lenet5 && make setup
+!cd Cuda-Lenet5 && make run
+```
+Download: mode/*
+
 
 Result: 
 simple neural network with 3 FC layers can obtain `0.97+` accuracy on MNIST testset.
