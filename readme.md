@@ -18,8 +18,3 @@ Google Colab:
 !cd Cuda-Lenet5 && make run
 ```
 Download: mode/*
-
-
-Result: 
-simple neural network with 3 FC layers can obtain `0.97+` accuracy on MNIST testset.
-LeNet-like CNN can obtain `0.98+` accuracy on MNIST testset.
