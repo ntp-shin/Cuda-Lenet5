@@ -67,11 +67,11 @@ int main() {
   SGD opt(0.001, 5e-4, 0.9, true);
   // SGD opt(0.001);
 
-  dnn.save_parameters("./model/weights-cpu.bin");
   const int n_epoch = 5;
   const int batch_size = 128;
   for (int epoch = 0; epoch < n_epoch; epoch ++) {
     shuffle_data(dataset.train_data, dataset.train_labels);
+    dnn.save_parameters("./model/weights-cpu.bin");
     for (int start_idx = 0; start_idx < n_train; start_idx += batch_size) {
       int ith_batch = start_idx / batch_size;
       Matrix x_batch = dataset.train_data.block(0, start_idx, dim_in,
@@ -100,6 +100,7 @@ int main() {
     std::cout << epoch + 1 << "-th epoch, test acc: " << acc << std::endl;
     std::cout << std::endl;
   }
+  std::cout << "save weights to ./model/weights-cpu.bin" << std::endl;
   dnn.save_parameters("./model/weights-cpu.bin");
   return 0;
 }

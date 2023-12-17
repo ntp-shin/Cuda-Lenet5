@@ -1,8 +1,8 @@
-demo: demo_classic.o 
-	nvcc -o demo -lm -lcuda -lrt demo_classic.o src/network.o src/mnist.o src/layer/*.o src/loss/*.o src/optimizer/*.o -I./ -L/usr/local/cuda/lib64 -lcudart
+train_cpu: train_cpu.o 
+	nvcc -o train_cpu -lm -lcuda -lrt train_cpu.o src/network.o src/mnist.o src/layer/*.o src/loss/*.o src/optimizer/*.o -I./ -L/usr/local/cuda/lib64 -lcudart
 
-demo_classic.o: demo_classic.cc
-	nvcc --compile demo_classic.cc -I./ -L/usr/local/cuda/lib64 -lcudart
+train_cpu.o: train_cpu.cc
+	nvcc --compile train_cpu.cc -I./ -L/usr/local/cuda/lib64 -lcudart
 
 ############################################################################
 
@@ -41,7 +41,7 @@ optimizer: src/optimizer/sgd.cc
 	nvcc --compile src/optimizer/sgd.cc -o src/optimizer/sgd.o -I./ -L/usr/local/cuda/lib64 -lcudart
 
 clean:
-	rm -f infoGPU infoGPU.o demo demo_classic.o
+	rm -f train_cpu train_cpu train_cpu.o
 
 clean_o:
 	rm -f *.o src/*.o src/layer/*.o src/loss/*.o src/optimizer/*.o src/layer/custom/*.o
@@ -55,5 +55,5 @@ setup:
 	make loss
 	make optimizer
 
-run: demo
-	./demo
+run: train_cpu
+	./train_cpu
